@@ -1,0 +1,733 @@
+{
+    "active": true,
+    "authentication": {
+        "type": "custom"
+    },
+    "beta": false,
+    "bulkDownloadEnabled": false,
+    "bulkUploadEnabled": false,
+    "cloneable": false,
+    "configuration": [
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "updated",
+            "description": "Updated Identifier",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "updatedIdentifier",
+            "name": "Updated Identifier",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "{}",
+            "description": "Store",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "store",
+            "name": "Store",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "https://staging.cloud-elements.com",
+            "description": "Stubby Base Url",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "base.url",
+            "name": "Base Url",
+            "required": true,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Instance ID",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "instance.id",
+            "name": "Instance ID",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "200",
+            "description": "Stubby Max Page Size (or limit)",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.max",
+            "name": "Max Page Size (or limit)",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Stubby Pagination Type",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "pagination.type",
+            "name": "Pagination Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "id",
+            "description": "ID identifier",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "idIdentifier",
+            "name": "ID identifier",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "created",
+            "description": "Created Identifier",
+            "displayOrder": 1,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "createdIdentifier",
+            "name": "Created Identifier",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Stubby Event Notification Signature Key",
+            "displayOrder": 11,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.signature.key",
+            "name": "Event Notification Signature Key",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Generic map used to specify default fields for bulk download and GET /all requests. Each key should be the canonical objectName and values may be specified as a comma-delimited string or a list of strings",
+            "displayOrder": 98,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "default.select.fields.map",
+            "name": "Default select fields",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "true",
+            "description": "Used to enable/disable filtering of null values from the responses",
+            "displayOrder": 99,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "filter.response.nulls",
+            "name": "Filter null values from the response",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "webhooks",
+            "description": "Stubby Event Type",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "event.vendor.type",
+            "name": "Event Type",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Stubby Time of Getting Token or Performing Authentication",
+            "displayOrder": 100,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": true,
+            "key": "authentication.time",
+            "name": "Time of Getting Token or Performing Authentication",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_32"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "1",
+            "description": "Stubby Set time interval for polling application (in minutes)",
+            "displayOrder": 101,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.poller.refresh_interval",
+            "name": "Event poller refresh interval",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_128"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Stubby Event Notification Callback URL",
+            "displayOrder": 102,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.callback.url",
+            "name": "Event Notification Callback URL",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "false",
+            "description": "Stubby Enable/Disable Event Notification",
+            "displayOrder": 102,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.notification.enabled",
+            "name": "Event Notifications Enabled",
+            "required": false,
+            "resellerConfig": false,
+            "type": "BOOLEAN"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "description": "Stubby Event Notification Subscription ID",
+            "displayOrder": 104,
+            "groupControl": false,
+            "hideFromConsole": true,
+            "internal": false,
+            "key": "event.notification.subscription.id",
+            "name": "Event Notification Subscription ID",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTFIELD_1000"
+        },
+        {
+            "active": true,
+            "companyConfig": false,
+            "defaultValue": "{\"_\":{\"url\":\"/_\",\"idField\":\"id\",\"datesConfiguration\":{\"updatedDateField\":\"updated\",\"updatedDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"updatedDateTimezone\":\"GMT\",\"createdDateField\":\"created\",\"createdDateFormat\":\"yyyy-MM-dd'T'HH:mm:ss'Z'\",\"createdDateTimezone\":\"GMT\"}}}",
+            "description": "Stubby Event Poller Resources Configuration",
+            "displayOrder": 104,
+            "groupControl": false,
+            "hideFromConsole": false,
+            "internal": false,
+            "key": "event.poller.configuration",
+            "name": "Event Poller Resources Configuration",
+            "required": false,
+            "resellerConfig": false,
+            "type": "TEXTAREA"
+        }
+    ],
+    "deleted": false,
+    "description": "A stub element for testing",
+    "extendable": true,
+    "extended": false,
+    "hooks": [],
+    "hub": "general",
+    "image": "https://images.cloudelements.io/test201904200517.gif",
+    "key": "stubby4vdrtest",
+    "logo": "stubby",
+    "modelType": "basic",
+    "models": [],
+    "name": "Stubby For VDR Testing",
+    "objects": [],
+    "parameters": [
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Accept",
+            "vendorType": "header"
+        },
+        {
+            "name": "application/json",
+            "required": false,
+            "source": "request",
+            "type": "value",
+            "vendorName": "Content-Type",
+            "vendorType": "header"
+        }
+    ],
+    "protocolType": "http",
+    "resources": [
+        {
+            "description": "Search for /{objectName}",
+            "hooks": [
+                {
+                    "body": "let result = JSON.parse(configuration.store)[request_path_variables.objectName]\n\nif (!result) {\n  result = []\n}\n\nif (request_expression && request_expression.length === 1) {\n  result = result.filter(obj => obj[request_expression[0].attribute] === request_expression[0].value)\n}\n\ndone({\n  continue: false, \n  response_body: result\n})",
+                    "contextParams": "request_path,request_path_variables,configuration,response_body,request_expression",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "description": "The CEQL search expression",
+                    "name": "where",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "converter:toQueryParameters",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "objectName",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/instance"
+        },
+        {
+            "description": "Create a(n) /{objectName}",
+            "hooks": [
+                {
+                    "body": "function id() {\n  return 'xxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n\nconst newObject = JSON.parse(request_body);\n\nconst store = JSON.parse(configuration.store);\n\nnewObject[configuration.idIdentifier] = id()\nnewObject[configuration.createdIdentifier] = new Date()\n\nif (store[request_path_variables.objectName]) {\n  store[request_path_variables.objectName].push(newObject)\n} else {\n  store[request_path_variables.objectName] = [newObject]\n}\ndone({request_vendor_headers: {authorization: request_headers.authorization}, request_vendor_body: {configuration: {store: JSON.stringify(store)}}, request_vendor_path: 'https://staging.cloud-elements.com/elements/api-v2/instances'})",
+                    "contextParams": "request_body,request_headers,request_path,request_path_variables,request_vendor_path,request_vendor_headers,request_vendor_body,configuration",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                },
+                {
+                    "body": "done({\n  response_body: JSON.parse(response_body.configuration.store)[request_path_variables.objectName].pop()\n})",
+                    "contextParams": "request_path,request_path_variables,configuration,response_body",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "postRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "POST",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "objectName",
+                    "name": "objectName",
+                    "required": false,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "thingy",
+                    "description": "body",
+                    "name": "body",
+                    "required": false,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "thingy",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/general/{objectName}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "PATCH",
+            "vendorPath": "/elements/api-v2/instances"
+        },
+        {
+            "description": "Delete a(n) /{objectName}",
+            "hooks": [
+                {
+                    "body": "if (!response_body || !response_body.configuration) {\n  done({})\n}\n\ndone({\n  response_status_code: 200,\n  response_body: null\n})\n",
+                    "contextParams": "configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "postRequest"
+                },
+                {
+                    "body": "const store = JSON.parse(configuration.store);\n\nconst oldObject = store[request_path_variables.objectName].find(obj => obj[configuration.idIdentifier] === request_path_variables.objectId)\n\nif (!oldObject) {\n  done({\n    continue: false,\n    response_status_code: 404,\n    response_body: {message: `'${request_path_variables.objectId}' not found`}\n  })\n} else {\n  store[request_path_variables.objectName] = \n    store[request_path_variables.objectName].filter(obj => obj[configuration.idIdentifier] !== request_path_variables.objectId)\n\n  done({request_vendor_headers: {authorization: request_headers.authorization}, request_vendor_body: {configuration: {store: JSON.stringify(store)}}, request_vendor_path: 'https://staging.cloud-elements.com/elements/api-v2/instances'})\n}\n",
+                    "contextParams": "request_headers,request_path,request_path_variables,request_vendor_path,request_vendor_headers,request_vendor_body,configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "DELETE",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The Object ID",
+                    "name": "objectId",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectId",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The Object Name",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{objectId}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "PATCH",
+            "vendorPath": "/elements/api-v2/instance"
+        },
+        {
+            "description": "Retrieve a(n) /{objectName}",
+            "hooks": [
+                {
+                    "body": "let result = JSON.parse(configuration.store)[request_path_variables.objectName]\n\nconst obj = result.find(obj => obj[configuration.idIdentifier] === request_path_variables.objectId)\n\nif (obj) {\n\tdone({\n  \tcontinue: false, \n  \tresponse_body: obj\n\t})\n} else {\n\tdone({\n  \tcontinue: false, \n    response_status_code: 404,\n  \tresponse_body: {message: `'${request_path_variables.objectId}' not found`}\n\t})\n}\n\n",
+                    "contextParams": "request_path,request_path_variables,configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The Object ID",
+                    "name": "objectId",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectId",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The Object Name",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{objectId}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/instance/{objectId}"
+        },
+        {
+            "description": "Update a(n) /{objectName}",
+            "hooks": [
+                {
+                    "body": "let newObject = JSON.parse(request_body);\n\nnewObject[configuration.updatedIdentifier] = new Date()\n\nnewObject[configuration.idIdentifier] = request_path_variables.objectId\n\nconst store = JSON.parse(configuration.store);\n\nconst oldObject = store[request_path_variables.objectName].find(obj => obj[configuration.idIdentifier] === newObject[configuration.idIdentifier])\n\nif (!oldObject) {\n  done({\n    continue: false,\n    response_status_code: 404,\n    response_body: {message: `'${newObject[configuration.idIdentifier]}' not found`}\n  })\n} else {\n  newObject = Object.assign(oldObject, newObject)\n\n  store[request_path_variables.objectName] = \n    store[request_path_variables.objectName].filter(obj => obj[configuration.idIdentifier] !== newObject[configuration.idIdentifier])\n\n  store[request_path_variables.objectName].push(newObject)\n\n  done({request_vendor_headers: {authorization: request_headers.authorization}, request_vendor_body: {configuration: {store: JSON.stringify(store)}}, request_vendor_path: 'https://staging.cloud-elements.com/elements/api-v2/instances'})\n}",
+                    "contextParams": "request_body,request_headers,request_path,request_path_variables,request_vendor_path,request_vendor_headers,request_vendor_body,configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                },
+                {
+                    "body": "if (!response_body || !response_body.configuration) {\n  done({})\n}\n\nconst store = JSON.parse(response_body.configuration.store)\n\nconst obj = store[request_path_variables.objectName]\n\t.find(obj => obj[configuration.idIdentifier] === request_path_variables.objectId)\n\ndone({\n  response_status_code: 200,\n  response_body: obj\n})\n",
+                    "contextParams": "request_path,request_path_variables,configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "postRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "PATCH",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The Object ID",
+                    "name": "objectId",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectId",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The object name",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "thingy",
+                    "description": "The object body",
+                    "name": "body",
+                    "required": true,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "thingy",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{objectId}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "PATCH",
+            "vendorPath": "/instances"
+        },
+        {
+            "description": "Update a(n) /{objectName}",
+            "hooks": [
+                {
+                    "body": "const newObject = JSON.parse(request_body);\n\nnewObject[configuration.updatedIdentifier] = new Date()\n\nnewObject[configuration.idIdentifier] = request_path_variables.objectId\n\nconst store = JSON.parse(configuration.store);\n\nconst oldObject = store[request_path_variables.objectName].find(obj => obj[configuration.idIdentifier] === newObject[configuration.idIdentifier])\n\nif (!oldObject) {\n  done({\n    continue: false,\n    response_status_code: 404,\n    response_body: {message: `'${newObject[configuration.idIdentifier]}' not found`}\n  })\n} else {\n  newObject.created = oldObject.created\n\n  store[request_path_variables.objectName] = \n    store[request_path_variables.objectName].filter(obj => obj[configuration.idIdentifier] !== newObject[configuration.idIdentifier])\n\n  store[request_path_variables.objectName].push(newObject)\n\n  done({request_vendor_headers: {authorization: request_headers.authorization}, request_vendor_body: {configuration: {store: JSON.stringify(store)}}, request_vendor_path: 'https://staging.cloud-elements.com/elements/api-v2/instances'})\n}\n\n",
+                    "contextParams": "request_body,request_headers,request_path,request_path_variables,request_vendor_path,request_vendor_headers,request_vendor_body,configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                },
+                {
+                    "body": "if (!response_body || !response_body.configuration) {\n  done({})\n}\n\nconst store = JSON.parse(response_body.configuration.store)\n\nconst obj = store[request_path_variables.objectName]\n\t.find(obj => obj[configuration.idIdentifier] === request_path_variables.objectId)\n\ndone({\n  response_status_code: 200,\n  response_body: obj\n})\n",
+                    "contextParams": "request_path,request_path_variables,configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "postRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "PUT",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "objectName",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                },
+                {
+                    "dataType": "thingy",
+                    "description": "The object body",
+                    "name": "body",
+                    "required": true,
+                    "source": "request",
+                    "type": "body",
+                    "vendorDataType": "thingy",
+                    "vendorName": "body",
+                    "vendorType": "body"
+                },
+                {
+                    "dataType": "string",
+                    "description": "id",
+                    "name": "objectId",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectId",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/{objectName}/{objectId}",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "PATCH",
+            "vendorPath": "/elements/api-v2/instance"
+        },
+        {
+            "description": "Search for /objects",
+            "hooks": [
+                {
+                    "body": "done({\n  continue: false,\n  response_body: Object.keys(JSON.parse(configuration.store))\n})",
+                    "contextParams": "configuration,response_body",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The page number of resources to retrieve",
+                    "name": "page",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "page",
+                    "vendorType": "query"
+                },
+                {
+                    "dataType": "string",
+                    "description": "The number of resources to return in a given page",
+                    "name": "pageSize",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "pageSize",
+                    "vendorType": "query"
+                },
+                {
+                    "converter": "toQueryParameters",
+                    "dataType": "string",
+                    "description": "The CEQL search expression",
+                    "name": "where",
+                    "required": false,
+                    "source": "request",
+                    "type": "query",
+                    "vendorDataType": "string",
+                    "vendorName": "converter:toQueryParameters",
+                    "vendorType": "query"
+                }
+            ],
+            "path": "/hubs/general/objects",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/"
+        },
+        {
+            "description": "Metadata",
+            "hooks": [
+                {
+                    "body": "const objects = JSON.parse(configuration.store)[request_path_variables.objectName]\n\nconst mergedObject = objects.reduce((accumulator, currentValue) => {return Object.assign(accumulator, currentValue)},{})\n\ndone({\n  continue: false,\n  response_body: {fields: Object.keys(mergedObject).map(key => {return {path: key, vendorPath: key}})},\n  response_status_code: 200\n})",
+                    "contextParams": "request_path,request_path_variables,configuration,response_body,response_status_code",
+                    "isLegacy": false,
+                    "mimeType": "application/javascript",
+                    "type": "preRequest"
+                }
+            ],
+            "kind": "eb",
+            "method": "GET",
+            "modelMigrated": false,
+            "parameters": [
+                {
+                    "dataType": "string",
+                    "description": "The object name",
+                    "name": "objectName",
+                    "required": true,
+                    "source": "request",
+                    "type": "path",
+                    "vendorDataType": "string",
+                    "vendorName": "objectName",
+                    "vendorType": "path"
+                }
+            ],
+            "path": "/hubs/general/objects/{objectName}/metadata",
+            "response": {
+                "contentType": "application/json"
+            },
+            "type": "api",
+            "vendorMethod": "GET",
+            "vendorPath": "/"
+        }
+    ],
+    "transformationsEnabled": true,
+    "trialAccount": false,
+    "typeOauth": false,
+    "useModelsForMetadata": true
+}

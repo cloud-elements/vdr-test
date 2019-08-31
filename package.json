@@ -1,13 +1,20 @@
 {
   "name": "vdr-test",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
+  "description": "CLI tool used for testing Cloud Elements VDRs using Cucumber",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Rick Rothenberg",
+  "license": "MIT",
+  "bin": {
+    "vdr-test": "src/cli/vdr-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloud-elements/vdr-test.git"
+  },
   "dependencies": {
     "chai": "^4.2.0",
     "cucumber": "^5.1.0",

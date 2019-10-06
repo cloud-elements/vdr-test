@@ -5,9 +5,6 @@
 
 This is a [Node.js](https://nodejs.org/en/) based CLI tool for doing [BDD](https://cucumber.io/docs/bdd/overview/) testing of [Cloud Elements](https://cloud-elements.com) [Virtual Data Resources](https://docs.cloud-elements.com/home/common-resources-overview) (AKA VDRs) using [Cucumber](https://www.npmjs.com/package/cucumber).
 
-In the interest of doing [The Simplest Thing That Could Possibly Work](http://wiki.c2.com/?DoTheSimplestThingThatCouldPossiblyWork), 
-this initial release is highly opinionated (because flexibility is more work).
-
 ## Installation
 
 First, if you haven't already, install [Node.js](https://nodejs.org/en/download/).
@@ -22,7 +19,7 @@ You will also need to install [The Doctor](https://www.npmjs.com/package/ce-util
 ## What it does
 
 ```bash
-Usage: vdr-test [options] <account>
+Usage: vdr-test [options] <account> [<GLOB|DIR|FILE[:LINE]>]
 
 CLI tool used for testing Cloud Elements VDRs using Cucumber
 
@@ -33,21 +30,34 @@ Options:
 ```
 
 The only required parameter is `account`.  This represents a login on Cloud Elements as registered in
-The Doctor.
+The Doctor. 
+
+You may also optionally specify the tests to run.  These can be provided in a number of ways:
+* As a glob pattern
+  * `tests/**/*.feature`
+* As a directory
+  * `tests/dir`
+* As a file
+  * `tests/my_feature.feature`
+* As a scenario by its line number in a file
+  * `tests/my_feature.feature:3`
+
+If no tests are given, then it will run all of the tests in the `tests` directory.
 
 By default, when you run `vdr-test`, it will:
-1. Upload all of your VDRs (which must be placed in a directory called `vdrs` in the doctor's `directory`
-storage format)
-2. Upsert a fresh copy of a mock element used for testing (called `Stubby`)
-3. Delete any instances of the mock element from prior tests
-4. Create an instance of the mock element for each element that you've defined transformations for and associate any
-transformations for that element to the mock instance
-5. Execute all of the cucumber tests (anything named `*.feature`) in the `tests` directory
+1. Upsert a fresh copy of a mock element used for testing (called `Stubby`)
+2. Delete any instances of the mock element from prior tests
+3. Create an instance of the mock element for each element that you've referenced in any of the tests being run 
+4. Upload any of your VDRs (which must be placed in a directory called `vdrs` in the doctor's `directory`
+storage format) which are referenced in the tests being run
+5. Associate any transformations referenced to the mock instance
+6. Execute all of the cucumber tests specified (or all of the tests in `tests` if none given)
 
 By running all of this `vdr-test` ensures that the latest versions of your VDRs stored on your computer are tested.
 
-However, steps 1-4 can take a long time (upwards of 30 seconds).  In order to speed up tests, you can
-provide the `--skip-setup` (or `-s`) option, which will skip steps 1-4 and just execute the tests.
+However, steps 1-5 can take a long time.  In order to speed up tests, you can
+provide the `--skip-setup` (or `-s`) option, which will skip steps 1-5 and just execute the tests. This is particularly
+useful when writing new tests.
 
 ## Writing tests
 

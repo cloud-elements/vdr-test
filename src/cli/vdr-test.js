@@ -24,14 +24,6 @@ process.env.account = account
 process.env.testDir = testDir
 if (commander.skipSetup) {
     process.env.skipSetup = 'true'
-    process.chdir(`${__dirname}/../..`)
-    spawn('node_modules/cucumber/bin/cucumber-js', [ '--require', 'src/cucumber/', `${testDir}/tests/`], {stdio: "inherit"})
-} else {
-    spawn('doctor', [ 'upload', 'vdrs', account, '-d', 'vdrs'], {stdio: "inherit"})
-        .on('exit', code => {
-            if (code == 0) {
-                process.chdir(`${__dirname}/../..`)
-                spawn('node_modules/cucumber/bin/cucumber-js', [ '--require', 'src/cucumber/', `${testDir}/tests/`], {stdio: "inherit"})
-            }
-        });
 }
+process.chdir(`${__dirname}/../..`)
+spawn('node_modules/cucumber/bin/cucumber-js', [ '--require', 'src/cucumber/', `${testDir}/tests/`], {stdio: "inherit"})

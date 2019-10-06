@@ -1,6 +1,6 @@
 {
   "name": "vdr-test",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "CLI tool used for testing Cloud Elements VDRs using Cucumber",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "chai": "^4.2.0",
+    "child-process-promise": "^2.2.1",
     "cucumber": "^5.1.0",
     "fs-extra": "^8.1.0",
     "js-yaml": "^3.13.1",
